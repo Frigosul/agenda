@@ -64,18 +64,18 @@ Este documento descreve a implementação da aplicação web agenda telefônica 
 
 ## Páginas
 
-<div> 
-  Sign-in
+<div class="display:block"> 
+  <p class="display:block">Sign-in</p> 
   <img src="./public/login.png" alt="HomePage" width="700" height="300" />
 </div>
 
-<div> 
-  Adicionar contato
+<div class="display:block"> 
+   <p class="display:block">Adicionar Contato</p> 
   <img src="./public/add-contact.png" alt="HomePage" width="700" height="300" />
 </div>
 
-<div>
-  Adicionar empresa
+<div class="display:block">
+    <p class="display:block">Adicionar Empresa</p> 
   <img src="./public/add-empresa.png" alt="HomePage" width="700" height="300" />
 </div>
 
