@@ -1,36 +1,79 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Docs: Agenda Telefônica com Next.js
 
-## Getting Started
+Este documento descreve a implementação da aplicação web agenda telefônica criada com Next.js.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+<img src="./public/home.png" alt="HomePage"  />
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Tecnologias e Dependências Principais
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js**
+- **TypeScript**
+- **Prisma**
+- **Tailwind CSS**
+- **Radix UI**
+- **React Hook Form**
+- **Zod**
+- **@tanstack/react-query**
+- **Next Auth**
+- **Fuse.js**
+- **Sonner**
+- **Docker Compose (v1.1.0)**
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## Configuração Inicial
 
-To learn more about Next.js, take a look at the following resources:
+1. **Instalação de Dependências**:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```bash
+   npm install
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+2. **Configuração do Banco de Dados**:
 
-## Deploy on Vercel
+   - Atualize o arquivo `.env` com as credenciais do banco de dados.
+   - Execute o docker-compose ou crie o banco de dados local:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   docker-compose up -d
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   - Execute as migrações:
+     ```bash
+     npx prisma migrate dev
+     ```
+
+3. **Execução do Ambiente de Desenvolvimento**:
+   ```bash
+   npm run dev
+   ```
+
+---
+
+## Funcionalidades Principais
+
+- **Cadastro de Contatos**: Adicione contatos na agenda.
+- **Busca e Filtragem**: Pesquise contatos usando nome, email ou telefone.
+- **Autenticação**: Login seguro com Next Auth e criptografia de senhas.
+- **Interface Responsiva**: Construída com Shadcn UI e Tailwind CSS.
+- **Notificações**: Feedback ao usuário usando Sonner.
+
+---
+
+## Páginas
+
+Sign-in
+<img src="./public/login.png" alt="HomePage" width="700" height="300" />
+
+Adicionar contato
+<img src="./public/add-contact.png" alt="HomePage" width="700" height="300" />
+
+Adicionar empresa
+<img src="./public/add-empresa.png" alt="HomePage" width="700" height="300" />
+
+## Futuras Melhorias
+
+- Suporte para exportação/importação de contatos em CSV.
+- Implementação de testes automatizados para maior confiabilidade.
