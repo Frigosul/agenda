@@ -31,17 +31,17 @@ Este documento descreve a implementação da aplicação web agenda telefônica 
 
 2. **Configuração do Banco de Dados**:
 
-   - Atualize o arquivo `.env` com as credenciais do banco de dados.
-   - Execute o docker-compose ou crie o banco de dados local:
+- Atualize o arquivo `.env` com as credenciais do banco de dados.
+- Execute o docker-compose ou crie o banco de dados local:
 
-   ```bash
-   docker-compose up -d
-   ```
+  ```bash
+  docker-compose up -d
+  ```
 
-   - Execute as migrações:
-     ```bash
-     npx prisma migrate dev
-     ```
+- Execute as migrações:
+  ```bash
+  npx prisma migrate dev
+  ```
 
 3. **Execução do Ambiente de Desenvolvimento**:
    ```bash
