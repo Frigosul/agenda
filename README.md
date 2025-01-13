@@ -19,9 +19,7 @@ Este documento descreve a implementação da aplicação web agenda telefônica 
 - **Next Auth**
 - **Fuse.js**
 - **Sonner**
-- **Docker Compose (v1.1.0)**
-
----
+- **Docker Compose**
 
 ## Configuração Inicial
 
